@@ -17,7 +17,7 @@ const OrderConfirmationPage: React.FC = () => {
       
       try {
         const response = await orderApi.getById(orderId);
-        if (response.data) {
+        if (response.data && Object.keys(response.data).length > 0) {
           setOrder(response.data);
         } else {
           throw new Error('No se pudo cargar el pedido');

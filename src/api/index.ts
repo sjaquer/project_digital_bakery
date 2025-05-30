@@ -85,18 +85,22 @@ export const orderApi = {
       
       console.log('Respuesta del webhook:', response.data);
       
-      // Verifica la estructura de la respuesta
       if (!response.data?.data?.id) {
         console.error('Respuesta inválida:', response.data);
         throw new Error('Respuesta del servidor no contiene ID');
       }
 
+      const finalOrder = {
+        ...order,
+        id: response.data.data.id,
+        status: response.data.data.status || 'pending'
+      };
+
+      // Guardar la orden en localStorage
+      localStorage.setItem(`order_${finalOrder.id}`, JSON.stringify(finalOrder));
+
       return { 
-        data: {
-          ...order,
-          id: response.data.data.id,
-          status: response.data.data.status || 'pending'
-        },
+        data: finalOrder,
         success: true 
       };
     } catch (error) {
@@ -117,11 +121,24 @@ export const orderApi = {
   
   getById: async (id: string): Promise<ApiResponse<Order>> => {
     try {
+      // Primero intentar obtener del localStorage
+      const savedOrder = localStorage.getItem(`order_${id}`);
+      if (savedOrder) {
+        return { 
+          data: JSON.parse(savedOrder),
+          success: true 
+        };
+      }
+
+      // Si no está en localStorage, intentar obtener del servidor
       const response = await apiClient.get(`/orders/${id}`);
       return { data: response.data };
     } catch (error) {
       console.error(`Error fetching order ${id}:`, error);
-      return { data: {} as Order, error: 'Error al cargar el pedido. Por favor, intente de nuevo.' };
+      return { 
+        data: {} as Order, 
+        error: 'Error al cargar el pedido. Por favor, intente de nuevo.' 
+      };
     }
   },
   
