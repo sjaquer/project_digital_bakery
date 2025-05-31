@@ -1,148 +1,88 @@
-Panadería Artesanal - E-commerce
-📝 Descripción
-Sistema de e-commerce para una panadería artesanal que permite a los clientes realizar pedidos online de productos de panadería y pastelería.
+🥐 Panadería Artesanal - E-commerce
+Este proyecto es una plataforma de comercio electrónico diseñada para una panadería artesanal, permitiendo a los clientes explorar productos de panadería y pastelería, realizar pedidos en línea y gestionar sus compras de manera eficiente.
 
-🚀 Características Actuales
-Catálogo de productos
-Carrito de compras
-Proceso de checkout
-Seguimiento de pedidos
-Estado de órdenes
-Impresión de recibos
-Diseño responsive
+🚀 Características Principales
+Catálogo de Productos: Visualiza una variedad de productos con imágenes, descripciones y precios.
+
+Carrito de Compras: Agrega, elimina y modifica productos en tu carrito antes de realizar la compra.
+
+Proceso de Checkout: Completa tus pedidos proporcionando información de envío y seleccionando métodos de pago.
+
+Seguimiento de Pedidos: Consulta el estado de tus pedidos en tiempo real.
+
 🛠️ Tecnologías Utilizadas
-"dependencies": {
-  "axios": "^1.6.7",
-  "lucide-react": "^0.344.0",
-  "react": "^18.3.1",
-  "react-dom": "^18.3.1",
-  "react-hot-toast": "^2.4.1",
-  "react-router-dom": "^6.22.3"
-},
-"devDependencies": {
-  "@eslint/js": "^9.9.1",
-  "@types/react": "^18.3.5",
-  "@types/react-dom": "^18.3.0",
-  "@vitejs/plugin-react": "^4.3.1",
-  "autoprefixer": "^10.4.18",
-  "eslint": "^9.9.1",
-  "tailwindcss": "^3.4.1",
-  "typescript": "^5.5.3",
-  "vite": "^6.3.5"
-}
+Frontend: React con TypeScript para una interfaz de usuario dinámica y tipada.
 
-📥 Instalación
-# Clonar repositorio
-git clone <url-repositorio>
+Estilos: Tailwind CSS para un diseño moderno y responsivo.
 
-# Instalar dependencias
+Empaquetado: Vite como bundler para un desarrollo rápido y eficiente.
+
+Control de Calidad: ESLint para mantener un código limpio y consistente.
+
+📁 Estructura del Proyecto
+bash
+Copiar
+Editar
+project_digital_bakery/
+├── public/                 # Archivos estáticos
+├── src/                    # Código fuente de la aplicación
+│   ├── components/         # Componentes reutilizables
+│   ├── pages/              # Páginas principales de la aplicación
+│   └── App.tsx             # Componente principal
+├── index.html              # Archivo HTML principal
+├── package.json            # Dependencias y scripts del proyecto
+├── tailwind.config.js      # Configuración de Tailwind CSS
+├── vite.config.ts          # Configuración de Vite
+└── README.md               # Documentación del proyecto
+📦 Instalación y Ejecución
+Clona el repositorio:
+
+bash
+Copiar
+Editar
+git clone https://github.com/sjaquer/project_digital_bakery.git
+cd project_digital_bakery
+Instala las dependencias:
+
+bash
+Copiar
+Editar
 npm install
+Inicia el servidor de desarrollo:
 
-# Configurar variables de entorno
-cp .env.example .env
-
-# Ejecutar en desarrollo
+bash
+Copiar
+Editar
 npm run dev
+La aplicación estará disponible en http://localhost:5173/.
 
-# Construir para producción
-npm run build
+🌐 Demo en Vivo
+Puedes ver la aplicación en funcionamiento aquí: project-digital-bakery.vercel.app
 
-⚙️ Configuración Pendiente
-Variables de Entorno (.env)
-Base de Datos
-Configurar conexión a base de datos
-Implementar migraciones
-Configurar backups automáticos
-Servicios
-Configurar servicio de emails
-Configurar almacenamiento de imágenes
-Configurar SSL/HTTPS
-Configurar dominio
-📋 Pendientes de Desarrollo
-Panel de Administración
-<input disabled="" type="checkbox"> CRUD completo para productos
-<input disabled="" type="checkbox"> Gestión de categorías
-<input disabled="" type="checkbox"> Control de inventario
-<input disabled="" type="checkbox"> Dashboard con estadísticas
-<input disabled="" type="checkbox"> Gestión de usuarios y roles
-<input disabled="" type="checkbox"> Editor de menú dinámico
-<input disabled="" type="checkbox"> Gestión de promociones
-Métodos de Pago
-<input disabled="" type="checkbox"> Integración con Stripe
-<input disabled="" type="checkbox"> Integración con PayPal
-<input disabled="" type="checkbox"> Pago con criptomonedas
-<input disabled="" type="checkbox"> Pago contra entrega
-<input disabled="" type="checkbox"> Transferencia bancaria
-<input disabled="" type="checkbox"> Facturación electrónica
-Usuarios y Autenticación
-<input disabled="" type="checkbox"> Sistema de registro/login
-<input disabled="" type="checkbox"> Perfiles de usuario
-<input disabled="" type="checkbox"> Historial de pedidos
-<input disabled="" type="checkbox"> Lista de favoritos
-<input disabled="" type="checkbox"> Sistema de puntos/fidelización
-<input disabled="" type="checkbox"> Recuperación de contraseña
-Funcionalidades Adicionales
-<input disabled="" type="checkbox"> Sistema de búsqueda avanzada
-<input disabled="" type="checkbox"> Filtros por categoría/precio
-<input disabled="" type="checkbox"> Sistema de reseñas
-<input disabled="" type="checkbox"> Chat en vivo
-<input disabled="" type="checkbox"> Notificaciones por email/SMS
-<input disabled="" type="checkbox"> Seguimiento en tiempo real
-<input disabled="" type="checkbox"> Calculadora de costos de envío
-<input disabled="" type="checkbox"> Sistema de cupones/descuentos
-Mejoras Técnicas
-<input disabled="" type="checkbox"> Tests unitarios
-<input disabled="" type="checkbox"> Tests de integración
-<input disabled="" type="checkbox"> Optimización de rendimiento
-<input disabled="" type="checkbox"> Implementación de PWA
-<input disabled="" type="checkbox"> SEO optimization
-<input disabled="" type="checkbox"> Caché de datos
-<input disabled="" type="checkbox"> CI/CD pipeline
-Backend y API
-<input disabled="" type="checkbox"> Documentación de API
-<input disabled="" type="checkbox"> Rate limiting
-<input disabled="" type="checkbox"> Autenticación JWT
-<input disabled="" type="checkbox"> Logging system
-<input disabled="" type="checkbox"> Monitoreo de errores
-<input disabled="" type="checkbox"> Validación de datos
-<input disabled="" type="checkbox"> Sistema de caché
-UI/UX
-<input disabled="" type="checkbox"> Modo oscuro
-<input disabled="" type="checkbox"> Temas personalizables
-<input disabled="" type="checkbox"> Animaciones mejoradas
-<input disabled="" type="checkbox"> Accesibilidad (WCAG)
-<input disabled="" type="checkbox"> Soporte multiidioma
-<input disabled="" type="checkbox"> Diseño para tablets
-📚 Documentación Pendiente
-Manual de usuario
-Documentación técnica
-Guía de API
-Guía de contribución
-Políticas de seguridad
-Estrategia de backup
-Plan de disaster recovery
-🔒 Seguridad
-Implementar CSRF protection
-Configurar headers de seguridad
-Sanitización de inputs
-Auditoría de dependencias
-Logs de seguridad
-Rate limiting
-Validación de datos
-📈 Monitoreo
-Implementar análisis de uso
-Monitoreo de rendimiento
-Tracking de errores
-Métricas de negocio
-Logs de sistema
-Alertas automáticas
-🤝 Contribuir
-Las contribuciones son bienvenidas. Por favor lee las guías de contribución antes de enviar un PR.
+📌 Estado del Proyecto
+El proyecto se encuentra en desarrollo activo. Se planea implementar las siguientes funcionalidades en futuras versiones:
+
+Autenticación de usuarios.
+
+Panel de administración para gestión de productos y pedidos.
+
+Integración con pasarelas de pago.
+
+Notificaciones por correo electrónico para confirmaciones de pedido.
+
+🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Si deseas colaborar, por favor sigue estos pasos:
+
+Haz un fork del repositorio.
+
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+
+Realiza tus cambios y haz commit (git commit -am 'Agrega nueva funcionalidad').
+
+Envía tus cambios a tu fork (git push origin feature/nueva-funcionalidad).
+
+Abre un Pull Request describiendo tus cambios.
 
 📄 Licencia
-Este proyecto está bajo la Licencia MIT
+Este proyecto está licenciado bajo la MIT License.
 
-📞 Soporte
-Para soporte técnico: sjaquer@outlook.es
-
-Hecho por sjaquer
